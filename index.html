@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
+        <meta name="description" content="Projektünk" />
+        <meta name="author" content="Idkman, Zsombor, Bandrás, Virág kollab" />
+        <title>Statisztika</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/kepek/csanyi-alapitvany-logo@2xdiff.png" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.7.0/sql-wasm.js"></script>
+    </head>
+    <body id="teteje">
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#teteje">Statisztika</a>
+                
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menü
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <img src="assets/img/kepek/fentrekoz.jpg" alt="fent kép" height="65px">
+                <img src="assets/img/kepek/200px-KSH-old1.jpg" alt="fent kép" height="65px" style="margin-left: 3%;">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#buday">Dr. Buday László</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#elete">Élete</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#rolunk">Rólunk</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#terkep">Térkép</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <img class="masthead-avatar mb-5" src="assets/img/kepek/250px-Buday_Lászlógyász.png" alt="Buday László" id="buday"/>
+                <!-- nagy text-->
+                <h1 class="masthead-heading text-uppercase mb-0">Dr. Buday László</h1>
+                <!-- középső cucc-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><img src="assets/img/kepek/csanyi-alapitvany-logo@2xbackupp.png" alt="logo" ></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- kicsi szöveg-->
+                <p class="masthead-subheading font-weight-light mb-0">Statisztikus - Egyetemi tanár</p>
+            </div>
+        </header>
+        <!-- Élete rész külön képekkel-->
+        <section class="page-section portfolio" id="elete">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Élete</h2>
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-heart"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- kis kép snippetek itt kezdődnek-->
+                <div class="row justify-content-center">
+                    <!--1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#csaladja">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><h1>Családja</h1></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/kepek/nemzetsegi_fa.png" alt="családfa" />
+                        </div>
+                    </div>
+                    <!--2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#tanulmanyai">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><h1>Tanulmányai</h1></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/kepek/tanulmanyai1.png" alt="Nagy lajos ELTE kombó" />
+                        </div>
+                    </div>
+                    <!--3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#tudmunk">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><h1>Tudományos munkássága</h1></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/kepek/Központi_Statisztikai_Hivatal.jpg" alt="..." />
+                        </div>
+                    </div>
+                    <!--4-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#skh">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><h1>A Központi Statisztikai Hivatal vezetőjeként</h1></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/kepek/KSH2.jpg" alt="Kép" />
+                        </div>
+                    </div>
+                    <!--5-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#halal">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><h1>1925. Március 7.</h1><i class="fas fa-cross"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/kepek/gyertya.jpg" alt="Kép" />
+                        </div>
+                    </div>
+                                       
+                </div>
+            </div>
+        </section>
+        <section class="page-section bg-primary text-white mb-0" id="rolunk">
+            <div class="container">
+                
+                <h2 class="page-section-heading text-center text-uppercase text-white">Rólunk</h2>
+                <!-- icon yet again kms-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><img src="assets/img/kepek/csanyi-alapitvany-logo@2xbackupp.png" alt="logo"></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+            </div>
+                <!-- szövegvagymi-->
+                <div class="row">
+                    <div class="row">
+                        <div class="col-lg-2 ms-auto">
+                            <p class="lead">A projektet készítette: <hr><!-- Mr. Driver -->Barkóczy Zsombor (Könyvkidolgozó) <hr><!-- soon to be dr. --> Dömölki András (Könyvkidolgozó) <hr> <!-- I am incredibly sorry lol, my mistake original gangster-->Flibert Virág (Szövegszerkesztő)<hr> Nagy Richárd (Weblapfejlesztés)<hr></p>
+                        </div>
+                        <div class="col-lg-4 me-auto text-center">
+                            <p class="lead">Kutatási statisztikákért kattintson ide: </p>
+                            <section class="page-section portfolio" id="elete" style="padding: 0px;">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-0 col-lg-0">
+                                        <div class="portfolio-item mx-0" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-magnifying-glass"></i></div>
+                                            </div>
+                                            <img class="img-fluid" src="assets/img/kepek/prezentacio-keszitese-szakdolgozathoz.jpg" alt="KMS INDEED" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    
+        </section>
+        <section class="page-section bg-primary text-white mb-10" id="terkep" style="padding-top: 0rem;">
+            <div class="container">
+                
+                <h2 class="page-section-heading text-center text-uppercase text-white">Térkép</h2>
+                <!-- icon yet again kms-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-map"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="row" style="margin: auto; width: 50%; height: 150%;" >   
+                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Jg0Eh7Ld7lL_LhFHIzJlEZq3mvjPJvE&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+                                    </div>
+                                </div>
+                    
+        </section>
+        <!-- lábléc-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- hely-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Címünk:</h4>
+                        <a href="https://www.google.hu/maps/place/Cs%C3%A1nyi+Alap%C3%ADtv%C3%A1ny+P%C3%A9csi+K%C3%B6z%C3%B6ss%C3%A9gi+H%C3%A1za/@46.0747304,18.2237595,19.92z/data=!4m6!3m5!1s0x4742b180de47829d:0xa6c1759bfeb9bab2!8m2!3d46.0746447!4d18.2240626!16s%2Fg%2F11gtzj0_1w?hl=hu&entry=ttu" style="color: white;" target="_blank">
+                        <p class="lead mb-0">
+                            Csányi Alapítvány Pécsi Közösségi Háza: <br>
+                            7621 Pécs, 
+                            Mátyás Király utca 21.
+                            
+                        </p>
+                        </a>
+                    </div>
+                    <!-- social media ikonok linkek-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Megtalálhatók vagyunk:</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/csanyialapitvany" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/csanyialapitvany/" target="_blank"><i class="fab fa-fw fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.csanyialapitvany.hu/" target="_blank"><i class="fab fa-fw fa-google"></i></a>
+                    </div>
+                    <!-- szöveg-->
+                    <div class="col-lg-4">
+                            <img src="assets/img/kepek/csanyi-alapitvany-logo-white@2x.png" alt="csanyilogo">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- adócsalás ezerrel-->
+        <div class="alul py-4 text-center text-white">
+            <div class="container"><small>Források: <a href="https://hu.wikipedia.org/wiki/Buday_L%C3%A1szl%C3%B3_(statisztikus)" target="_blank"> Wikipédia </a>, <a href="https://www.kshkonyvtar.hu/article/56/253/buday-laszlo-1873-1925-muvei" target="_blank">KSHkönyvtár</a>, <a href="https://bookline.hu/product/home.action?_v=Romvary_Ferenc_Pecs_kozteri_szobrai&type=10&id=2110660282"> Romváry Ferenc: Pécs köztéri szobrai</a>
+                <p class=" text-center text-white" style="margin-bottom: 0%;">Az adatokat 193 emléktáblával számoltuk ki, azóta az adatbázis frissült.</p>
+                
+            </small></div>
+        </div>
+        <!-- felbukkanó-->
+        <!-- pop1-->
+        <div class="portfolio-modal modal fade" id="csaladja" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- cím-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Családja</h2>
+                                    <!-- gyász ikonok-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-house"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- kép-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/kepek/Buday_Laszlo.jpg" alt="Ház ahol született" />
+                                    <!-- még több szöveg kmmmmmmmmmms-->
+                                    <p class="mb-4" style="text-align: justify;">Buday László 1873. október 27-én született Pécsett tízgyermekes nemesi családban. Édesapja Buday Béla (1823–1900), a pécsi káptalan uradalmi mérnökeként dolgozott, édesanyja Kelemen Tekla (1842–1902). Testvérei mindketten értelmiségi pályát futottak be, Buday Kálmán (1863–1937)  mint orvos, patológus, egyetemi tanár, Buday Dezső (1879–1919) pedig jogászként tevékenykedett. Felesége Szekula Mária volt.
+                                    </p>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199.8628446723889!2d18.223991061900733!3d46.074683219875105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4742b180de47829d%3A0xa6c1759bfeb9bab2!2zQ3PDoW55aSBBbGFww610dsOhbnkgUMOpY3NpIEvDtnrDtnNzw6lnaSBIw6F6YQ!5e0!3m2!1shu!2shu!4v1696670679191!5m2!1shu!2shu" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    
+                                    <hr>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Bezárás
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pop2-->
+        <div class="portfolio-modal modal fade" id="tanulmanyai" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- cím-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tanulmányai</h2>
+                                    <!-- ikonooooook-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-book"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- kép-->
+                                    <p class="mb-0" style="text-align: justify;">Középiskolai tanulmányait szülővárosában, a Ciszterci Rend Pécsi Katolikus Főgimnáziumában folytatta. Ekkor érdeklődése még az irodalomra irányult, amiben sikerét az is mutatta, hogy tizenöt éves korától költeményei is jelentek meg helyi lapokban.</p>
+                                    <a href="https://maps.app.goo.gl/aiXLMGCgmRDPKhLf8" target="_blank"><img class="img-fluid rounded mb-5" src="assets/img/kepek/Nagy_Lajos.JPG" alt="Nagy Lajos gimi" /></a>
+                                    <a href="https://maps.app.goo.gl/cp5QEN8qjrGUn2yB8" target="_blank"><img class="img-fluid rounded mb-1" src="assets/img/kepek/eltejpg.jpg" alt="Elte jogi kar" /></a>
+                                    <p class="mb-0" style="text-align: justify;">A gimnáziumot 1891-ben végezte el, ezután beiratkozott a Budapesti Tudományegyetemre, ahol 1897-ben megszerezte a jog- és államtudományi doktorátust, s ugyanekkor statisztikai szakvizsgáját is elvégezte. Egyetemi évei alatt több újságnak is dolgozott, az Ország-Világ segédszerkesztőjeként, illetve a Fővárosi Lapok munkatársaként is dolgozott. 1894-ben jelent meg első, önálló verseskötete, 1895-ben pedig megírta „<a href="assets/buday_laszlo_a_reformator.pdf" target="_blank"> reformátor</a>” című regényét. </p>
+                                    <hr>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Bezárás
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pop3-->
+        <div class="portfolio-modal modal fade" id="tudmunk" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tudományos munkássága</h2>
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-flask"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <img class="img-fluid rounded mb-5" src="assets/img/kepek/kozponti_statisztikai_hivatal_ksh_fb.com_kozpontistatisztikaihivatal.jpg" alt="KSH kép" />
+                                    <p class="mb-4" style="text-align: justify;">
+                                    1896-ban a Központi Statisztikai Hivatal munkatársa lett és aktívan szerepet vállalt az 1897-es évi szervezeti reform és az 1898-as első hivatali munkaterv kidolgozásában. Az 1900. évi népszámlálás lebonyolítását és eredményeinek közlését is az ő irányítása alatt vitték véghez. Az 1900-as évek elején munkaszeretetének és szorgalmának köszönhetően már jelentős tudományos munkásságot tudott felmutatni. 1901-ben „<a href="assets/buday_laszlo_a_ksh_adatgyujteseinek_magyarazata.pdf" target="_blank">A m. kir. központi statisztikai hivatal adatgyűjtéseinek magyarázata</a>” című munkájában összefoglalta a legfontosabb tudnivalókat a hivatalos statisztikai adatgyűjtéssel kapcsolatban mindazok számára, akik statisztikai szolgálatban dolgoznak. 1911-ben jelent meg a „<a href="assets/MSK_036.pdf" target="_blank">M. kir. központi statisztikai hivatal munkássága (1871-1911)</a>” című kötet aminek szerkesztési folyamatában részt vett. Az 1910. évi népszámlálás megszervezésében és előkészítésében szintén vezető szerepet töltött be.
+
+                                    </p>
+                                    <hr>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Bezárás
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pop4-->
+        <div class="portfolio-modal modal fade" id="skh" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">A KSH vezetőjeként</h2>
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-building"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <img class="img-fluid rounded mb-5" src="assets/img/kepek/KSH1.jpg" alt="Kinti kép" />
+                                    <p class="mb-4" style="text-align: justify;">1914-ben, Vargha Gyula távozása után a Központi Statisztikai Hivatal aligazgatójává nevezték ki, majd 1914. augusztus 1-től igazgatójává léptették elő.</p>
+                                    <img class="img-fluid rounded mb-5" src="assets/img/kepek/KSHvez.jpg" alt="benti kép" />
+                                    <p class="mb-4" style="text-align: justify;">A hivatal vezetői pozícióját betöltő évei alatt tervei nagy részét azonban nem tudta megvalósítani, mivel az első világháború miatt a személyzet túlnyomó része bevonult, így az adatfelvételek és feldolgozások során nehézségek léptek fel. Buday Lászlót 1915-ben a Magyar Tudományos Akadémia levelező tagjává választották, akadémiai székfoglaló előadását Magyarország népességének műveltségéről tartotta.</p>
+                                    <img class="img-fluid rounded mb-5" src="assets/img/kepek/MTA.jpg" alt="MTA" />
+                                    <p class="mb-4" style="text-align: justify;">Gróf Teleki Pállal is együttműködött egy térképsorozat kapcsán, amely a magyarországi nemzetiségi viszonyokat kívánta bemutatni, a háború alatti fő munkájaként tartható számon. Az első világháború után a Központi Statisztikai Hivatal számára az adatgyűjtő munka szinte lehetetlenné vált, a ki nem adott munkákat végül 1919-ben kezdték el megjelentetni. Buday László ekkor főképp a béketárgyalások anyagaival foglalkozott, legfőbb eredménye, hogy 1920-ban a népszámlálást az igen nehéz körülmények ellenére is lebonyolították.</p>
+                                        
+                                    <p class="mb-4" style="text-align: justify;">1920-ban a Királyi József Műegyetem statisztikai és alkalmazott közgazdaságtani tanszék vezetője lett. Élete fő műve, a „Megcsonkított Magyarország” 1921-ben jelent meg, mely hamar a háború utáni időszak egyik legnagyobb könyvsikere lett, a Magyar Tudományos Akadémia Lévay-díjjal jutalmazta munkájáért. A könyv összefoglalja a trianoni döntéssel sújtott Magyarország legfőbb területi, népességi, gazdasági és kulturális veszteségeit. A mű két fordítást is kapott, angolul és franciául is megjelent.</p>
+                                    <img class="img-fluid rounded mb-5" src="assets/img/kepek/BME.jpg" alt="BME" />
+                                    <p class="mb-4" style="text-align: justify;">A Magyar Statisztikai Társaság megalapítása is az ő nevéhez fűződik, 1922-ben hozta létre a szervezetet, mely a tudomány hazai művelőinek összefogását szolgálta. Rendszeresen jelentettek meg francia nyelven Revue de la Société Hongroise de Statistique címmel szemléket, ezeket maga Buday László szerkesztette.</p>
+                                        
+                                    <p class="mb-4" style="text-align: justify;">1923-ban jelent meg „A statisztika elmélete és története” és a „<a href="assets/buday_laszlo_magyarorszag_kuzdelmes_evei.pdf" target="_blank">Magyarország küzdelmes évei</a>” című munkája, mely a „<a href="assets/buday_laszlo_a_megcsonkitott_magyarorszag.pdf" target="_blank">Megcsonkított Magyarország</a>” kiegészített, a háború utáni évek adatait is tartalmazó kiadása volt. Nemzetközi szinten is elismerték munkáját, tagja volt a Nemzetközi Statisztikai Intézetnek, svájci, német statisztikai társaságoknak.</p>
+                                        <hr>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Bezárás
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pop5-->
+        <div class="portfolio-modal modal fade" id="halal" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8" style="height: fit-content;">
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">1925. Március 7.</h2>
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-cross"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <div style="display: inline-block;">
+                                        <p class="mb-4" style="text-align: justify; display: inline-block; vertical-align: top; margin-left: 5%;">Buday László 1925. március 7-én, 51 évesen hunyt el. Sírhelye a Fiumei úti sírkertben, Budapesten található.</p>
+                                        <a href="assets/img/kepek/Buday.jpg" target="_blank"><img class="img-fluid rounded mb-5" src="assets/img/kepek/Buday.jpg" alt="Kép" style="height: 350px; width: 240px; display: inline-block;" /></a>
+                                    </div>
+                                   <hr> 
+                                   <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Bezárás
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pop6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                    <!-- nagy cucc-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Émléktáblák statisztika</h2>
+                                    <!-- ikonok-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- szöveg-->
+                                    <h6 class="mb-4">Mi a történelmi Pécsnek az emléktábláit átvizsgáltuk és arról készítettünk egy statisztikát</h6>
+                                    <div style="width:100%">
+                                    <button id="toggleButton" class="btn btn-outline-dark" onclick="toggleVisibility" style="width: 50%;">A legtöbbet használt anyag</button>
+                                    <button id="gomb" class="btn btn-outline-dark" onclick="toggleVisibilityy" style="width: 50%;">A hely ahol a legtöbb emléktábla volt</button>
+                                    <button id="gyasz" class="btn btn-outline-dark" onclick="toggleVisibiliti" style="width: 50%;">Statisztika a található információkról az emléktáblákon</button>
+                                    <button id="tunt" onclick="toggleAndLoadData()" class="btn btn-outline-dark" style="width: 50%;">Adatok betöltése</button>
+                                    </div>
+                                    <div id="myParagraph" style="display: none;">
+                                      <p style="display: inline-block; text-align: justify; vertical-align: top; width: 25%; margin-right: 5px;">
+                                        Fehér márvány 60-al amely, 32%-a az összegyűjtött emléktábláknak.
+                                        <br>
+                                        <a href="anyag_csop.xlsx"><button id="nemtudommar" class="btn btn-outline-dark">Erre kattintva letölthető az excel táblázat anyagokra lebontva</button></a>
+                                        <a href="assets/statok/db.png" target="_blank"><button id="nemtudommar" class="btn btn-outline-dark">Erre kattintva megtekinthető a körcikk</button></a>
+                                      </p>
+                                      <a href="assets/statok/kor.png" target="_blank"><img src="assets/statok/kor.png" alt="márvány fehér" class="img-fluid rounded mb-5" style="display: inline-block; width: 70%; vertical-align: top;"></a>
+                                    </div>
+                                      
+                                    
+                                    <script>
+                                        function toggleVisibility() {
+                                        var paragraph = document.getElementById("myParagraph");
+                                        var button = document.getElementById("toggleButton");
+                                        if (paragraph.style.display === "none") {
+                                            paragraph.style.display = "inline-block";
+                                            button.textContent = "Bezárás"
+                                        } else {
+                                            paragraph.style.display = "none";
+                                            button.textContent = "A legtöbbet használt anyag"
+                                        }
+                                        }
+
+                                        var toggleButton = document.getElementById("toggleButton");
+                                        toggleButton.addEventListener("click", toggleVisibility);
+                                    </script>
+                                    <br id="adócsalás" style="display: none; margin-top: 4%;">
+                                   
+                                    <div id="parag2" style="display: none;">
+                                    <p style="display: inline-block; text-align: justify; vertical-align: top; width: 25%; margin-right: 5px;">Széchenyi tér 37-el amely 19,35% az összesből.
+                                        <a href="utca_csop.xlsx"><button id="nemtudommar" class="btn btn-outline-dark">Erre kattintva letölthető az excel táblázat utcákra lebontva</button></a>
+                                        <a href="assets/statok/Utca.png" target="_blank"><button id="nemtudommar" class="btn btn-outline-dark">Erre kattintva megtekinthető a diagram</button></a>
+                                    </p>
+                                        <a href="assets/statok/Névtelen.png" target="_blank"><img src="assets/statok/Névtelen.png" alt="nem tudom mi" class="img-fluid rounded mb-5" style="display: inline-block; width: 70%; vertical-align: top;"></a>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.7427457982776!2d18.22556567667857!3d46.07617049239896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4742b103cb90a1cd%3A0xe4c8f1de02eb8e4f!2zU3rDqWNoZW55aSB0w6ly!5e0!3m2!1shu!2shu!4v1696777569450!5m2!1shu!2shu" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                    <script>
+                                    var brvis = false;
+                                        function toggleVisibilityy() {
+                                        var paragraph = document.getElementById("parag2");
+                                        var button = document.getElementById("gomb");
+                                        var br = document.getElementById("adócsalás");
+                                        if (paragraph.style.display === "none") {
+                                            paragraph.style.display = "inline-block";
+                                            button.textContent = "Bezárás";
+                                            br.style.display = "block"
+                                            brvis = true
+                                        } else {
+                                            paragraph.style.display = "none";
+                                            button.textContent = "A hely ahol a legtöbb emléktábla volt"
+                                            br.style.display = "none"
+                                            brvis = false
+                                        }
+                                        }
+
+                                        var toggleButton = document.getElementById("gomb");
+                                        toggleButton.addEventListener("click", toggleVisibilityy);
+                                    </script>
+                                    
+                                    <div id="idkman" style="display: none;">
+                                        <br>
+                                        <h1>Téma előfordulása</h1>
+                                        <img src="assets/statok/elofordulas.png" alt="nem tudom mi" class="img-fluid rounded mb-5" style="display: inline-block; width: 70%; vertical-align: top;"></a>
+                                        <h1>Személyekről statisztika</h1>
+                                        <img src="assets/statok/eloszlas.png" alt="nem tudom mi" class="img-fluid rounded mb-5" style="display: inline-block; width: 70%; vertical-align: top;"></a>
+                                        <img src="assets/statok/szulovaros.png" alt="nem tudom mi" class="img-fluid rounded mb-5" style="display: inline-block; width: 70%; vertical-align: top;"></a>
+                                        <img src="assets/statok/foglalkozasok.png" alt="nem tudom mi" class="img-fluid rounded mb-5" style="display: inline-block; width: 70%; vertical-align: top;"></a>
+                                      
+                                      
+                                    </div>
+                                      
+                                    
+                                    <script>
+                                        function toggleVisibiliti() {
+                                        var paragraph = document.getElementById("idkman");
+                                        var button = document.getElementById("gyasz");
+                                        if (paragraph.style.display === "none") {
+                                            paragraph.style.display = "inline-block";
+                                            button.textContent = "Bezárás"
+                                        } else {
+                                            paragraph.style.display = "none";
+                                            button.textContent = "Statisztika a található információkról az emléktáblákon"
+                                        }
+                                        }
+
+                                        var toggleButton = document.getElementById("gyasz");
+                                        toggleButton.addEventListener("click", toggleVisibiliti);
+                                    </script>
+                                    
+
+
+                                   
+                                    <table id="data-table" style="display: none; text-align: justify;" >
+                                        <thead>
+                                            <tr>
+                                                <th>Név</th>
+                                                <th>Anyag</th>
+                                                <th>Utca</th>
+                                                <th>Házszám</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="table-body" ></tbody>
+                                    </table>
+                                    <button id="tuntetve" onclick="toggleAndLoadData()" class="btn btn-outline-dark" style="display: none; margin: auto ;width: 50%">Adatok betöltése</button>
+                                    <br style="display: none;" id="gyaszmegaszenvedes">
+                                   
+                                    <script>
+                                        function toggleVisibilityyy() {
+                                            var paragraph = document.getElementById("data-table");
+                                            var button = document.getElementById("tunt");
+                                            var betonkeverő = document.getElementById("tuntetve");
+                                            var gorilla = document.getElementById("gyaszmegaszenvedes");
+                                            if (paragraph.style.display === "none") {
+                                                paragraph.style.display = "inline-block";
+                                                button.textContent = "Adatok bezárása";
+                                                betonkeverő.style.display = "block"
+                                                betonkeverő.textContent = "Adatok bezárása"
+                                                gorilla.style.display = "block"
+
+                                            } else {
+                                                paragraph.style.display = "none";
+                                                button.textContent = "Adatok megnyítása";
+                                                betonkeverő.style.display = "none"
+                                                gorilla.style.display = "none"
+                                            }
+                                        }
+                                
+                                        function loadData() {
+                                            var tableBody = document.getElementById('table-body');
+                                            tableBody.innerHTML = '';
+                                
+                                            var csvData = `Név, Anyag, Utca, Házszám, id
+Vargha Károly, fehér márvány, Aradi vértanúk útja, 42, 1
+Zrínyi Miklós, fehér márvány, Aradi vértanúk útja, 42, 2
+Vargha Károly, fehér márvány, Aradi vértanúk útja, 42, 1
+Zrínyi Miklós, fehér márvány, Aradi vértanúk útja, 42, 2
+Szabó Samu, fekete gránit, Anna utca, 18, 3
+Visy Zoltán, siklósi rózsamárvány, fehér márvány, Anna utca, 20, 4
+Weöres Sándor, indai gránit, Apáca utca, 8, 5
+Csorba Győző, indai gránit, Apáca utca, 8, 6
+Pécsi Dalárda, mészkő, Apáca utca, 10, 7
+Nendtvich Andor, siklósi mészkő, Apáca utca, 12, 8
+M.Maróti Jolán Assumpta, kanfanár mészkő, Apáca utca, 23, 9
+Baptista Imaház, sárgás kemény mészkő, Bástya utca, 6, 10
+Sopiane Városfal, fekete gránit, Citrom utca, 19, 11
+Rovásírás, fehér márvány, Citrom utca, 16, 12
+Körösztös Imre Krizosztom, kemény mészkő, Ferencesek utcája, 35, 13
+Zlatko Prica, fekete gránit, Ferencesek utcája, 22, 16
+Koczián Sándor, műkő, Ferencesek utcája, 24, 17
+Horváth Antal, mázas pyrogránit, Ferencesek utcája, 25, 18
+Németh Béla, fehér márvány, Ferencesek utcája, 36, 19
+Bukszár Béla, vörös gránit, Ferencesek utcája, 42, 20
+Szigeti Kapu, szürke gránit impala, Ferencesek utcája, 52, 21
+Ernster Géza, Ernster Dezső, kemény mészkő, Fürdő utca, 1, 22
+Siklósi Kapu, szürke gránit impala, Irgalmasok utcája, 5, 24
+Berze Nagy János, ruskicai márvány, Janus Pannonius utca, 5, 26
+Krisztics Sándor, siklósi fehér márvány, Janus Pannonius utca, 5, 27
+Halász Béla, fehér márvány, Janus Pannonius utca, 6, 28
+Horváth Olivér Adolf, fekete gránit, Janus Pannonius utca, 8, 29
+Reéh György, siklósi márvány, Jókai tér, 4, 30
+Zsolnay Vilmos, eosinmázas kerámia, Jókai utca, 2, 31
+Postapalota, kemény mészkő, Jókai utca, 10, 32
+Székesegyházi Énekiskola, fehér márvány, Káptalan utca, 1, 35
+Handó György, kemény mészkő, Káptalan utca, 2, 36
+Földalatti Bányászati Múzeum, fekete gránit, Káptalan utca, 3, 37
+Házépítés, fehér márvány, Káptalan utca, 4, 38
+Csekey István, fehér márvány, Káptalan utca, 4, 39
+Martyn Ferenc, fekete gránit, Káptalan utca, 6, 40
+Abay Gyula, fekete labradorit, Király utca, 1, 41
+Bartók Béla, fehér márvány, Király utca, 5, 42
+Hamerli Család, fekete gránit, Király utca, 5, 43
+Nendtvich Tamás, mázás pyrogránit, Király utca, 8, 44
+Pécsi Villamosvasút, bolgár mészkő, Király utca, 14, 45
+Liszt Ferenc, rózsamárvány, Király utca, 15, 46
+Dominikánus, matt pyrogránit, Színház tér, -, 47
+Faluhelyi Ferenc, bolgár vraca mészkő, Király utca, 23, 48
+Munkásmozgalmi, fehér márvány, Király utca, 26, 49
+I. Világháború, fehér márvány, Király utca, 44, 50
+Tanítóképző, siklósi rózsamárvány, Király utca, 44, 51
+Virág Benedek, fehér márvány, Király utca, 44, 52
+Gróf. Széchenyi István, fekete gránit, Király utca, 44, 53
+Pécsi Püspöki Joglyceum, fehér márvány, Király utca, 44, 54
+Budai Kapu, szürke gránit impala, Király utca, 46, 55
+Városfal Rehabilitáció, mészkő, Kálvária utca, -, 56
+Szentágothai János, fehér márvány, Szigeti út, 57
+Lickl György, szürke kemény mészkő, Majorossy Imre utca, 13, 58
+Steinmetz Endre, fehér márvány, Dischka Győző utca, 2, 60
+Puhr Ferenc, fehér márvány, Rákóczi út, 4, 61
+Molnár Farkas, színés félmárvány, Rákóczi út, 4, 62
+Pécsi Városi múzeum, kemény mészkő, Rákóczi út, 11, 63
+Nyomdász Egylet, fehér márvány, Rákóczi út, 15, 64
+Vadász Elemér, fehér márvány, Rákóczi út, 28, 65
+Jánosi Engel Adolf, kanfanár mészkő, Rákóczi út, 54, 66
+Török alóli felszabadulás, siklósi mészkő, Barbakán, 71
+Chevra Kadisa Alapítványozói, fekete gránit, Fürdő utca, 1, 72
+II. Világháborús Mártírok, szürke műkő, Fürdő utca, 2, 73
+Szentlőrinc, I.Világháborús, fehér márvány, Fürdő utca, 2, 74
+Villányi Zsidó Mártírok, fehér márvány, Fürdő utca, 2, 75
+Holokauszt Áldozatai, siklósi fehér márvány, Fürdő utca, 2, 76
+Consumegylet, fehér márvány, Kossuth tér, 5, 77
+Újjáépítés mártírjai, siklósi vörös félmárvány, Mária utca, 2, 78
+Janus Pannonius, szürkésfehér márvány, Mária utca, 2-4, 79
+Janus Pannonius, szürkésfehér márvány, Mária utca, 2-4, 80
+Polgári Iskola, kanfanár mészkő, Mária utca, 2, 81
+Asztalos Lajos, fehér márvány, Mária utca, 4, 82
+Mohács-Pécsi Vasút, fekete gránit, Mária utca, 7, 83
+DGT Székház, fekete gránit, Mária utca, 8, 84
+Jaroslav Jičínský, fekete gránit, Mária utca, 9, 85
+Pécsi Jótékony Nőegylet, kemény mészkő, Mária utca, 18, 86
+Angster Gyár, bolgár vraca mészkő, Mária utca, 35, 87
+Fejér Lipót, pyrogránit, Mária utca, 16, 88
+Kertész Endre, vörös gránit, Mátyás király utca, 14, 89
+Vikár Béla, fehér márvány, Mátyás király utca, 15, 90
+Agócsy László, sötétszürke gránit, Mátyás király utca, 15, 91
+Svoboda Gáspár, süttöi mészkő, Mátyás király utca, 15, 92
+Buday László, fehér márvány, Mátyás király utca, 21, 93
+Szenteleky Kornél, fehér márvány, Mátyás király utca, 26, 94
+Munkácsy Mihály, fehér márvány, Munkácsy Mihály utca, 31, 96
+Marianum, szürke félmárvány, Papnövelde utca, 2, 97
+Püspöki Tanítóképző, siklósi rózsamárvány, Papnövelde utca, 2, 98
+Schneider István, fekete gránit, Papnövelde utca, 2, 99
+Felszabadulás, rózsaszín márvány, Papnövelde utca, 5, 100
+Felújítás, siklósi rózsamárvány, Papnövelde utca, 5, 101
+Piatsek József, siklósi rózsamárvány, Papnövelde utca, 6, 102
+Házavatás, vörös süttöi mészkő, Papnövelde utca, 11-13, 103
+Esztergár Lajos imája, mészkő, Hunyadi út, 4, 105
+Virág Ferenc imája, mészkő, Hunyadi út, 4, 106
+300 éves jubileum, fehér márvány, Hunyadi út, 4, 107
+450 éves jubileum, fehér márvány, Hunyadi út, 4, 108
+Pécsi jezsuita vértanúk, mészkő, Hunyadi út, 4, 109
+Pécsi jezsuita lelkipásztorok, mészkő, Hunyadi út, 4, 110
+belvárosi Plébánosok, vörös márvány, Hunyadi út, 4, 111
+Csonka Ferenc, fehér márvány, Hunyadi út, 4, 112
+Felszabadulás, fehér márvány, Hunyadi út, 4, 113
+Pécsi Polgárok, sötétszürke gránit, Széchenyi tér, -, 114
+Esztergár Lajos, fehér márvány, Széchenyi tér, 1, 115
+Nendtvich Andor, sárgásbarna mészkő, Széchenyi tér, 1, 116
+Baranyai Aurél, szürke mészkő, Széchenyi tér, 2, 117
+Kórházalapítás, vörös márvány, Széchenyi tér, 5, 118
+Hild János, fehér márvány, Széchenyi tér, 7, 119
+Népi Kollégium, siklósi rózsamárvány, Széchenyi tér, 9, 120
+Baranya Címere, fehér márvány, Széchenyi tér, 9, 121
+Iskola Alapítás, szürke márvány, Széchenyi tér, 11, 122
+Werner Adolf, siklósi márvány, Széchenyi tér, 11, 123
+Faludi Ferenc, vörös márvány, Széchenyi tér, 11, 124
+Garay János, vörös márvány, Széchenyi tér, 11, 125
+Vas Gereben, vörös márvány, Széchenyi tér, 11, 126
+Babits Mihály, vörös márvány, Széchenyi tér, 11, 127
+Fodor József, sötétszürke márvány, Széchenyi tér, 11, 128
+August Senoa, szürke márvány, Széchenyi tér, 11, 129
+Az iskola jeles tanulóinak, mázas kerámia, Széchenyi tér, 11, 130
+Keresztes-Fischer Ferenc, szürke süttöi mészkő, Széchenyi tér, 11, 131
+Jedlik Ányos, bronz, Széchenyi tér, 11, 132
+Nádor Tamás, fehér márvány, Széchenyi tér, 11, 133
+Arató Miklós Orbán, tűzzománc, Széchenyi tér, 11, 134
+1956-os Vértanúi(Nagy Lajos), süttői kemény mészkő, Széchenyi tér, 11, 135
+Gombbás Miksa és Módly Dezső, fekete gránit, Széchenyi tér, 11, 136
+Tóth Ilona, fehér márvány, Széchenyi tér, 11, 137
+Nagy Elődök, fehér márvány, Széchenyi tér, 11, 138
+Pécsi jezsuita és Ciszterci oktatás, mészkő, Széchenyi tér, 11, 139
+Pécsi írócsoport, vörös gránit, Széchenyi tér, 17, 140
+Templomszentelés, mészkő, Szent István tér, 10, 142
+Restaurálás, szürke kemény mészkő, Szent István tér, 10, 143
+II. János Pál Pápa, fekete gránit, Szent István tér, 10, 144
+Bárdos Lajos, fekete gránit, Szent István tér, 6, 145
+Kolping, fehér márvány, Szent István tér, 9, 146
+Leőwey Klára, fehér márvány, Szent István tér, 8-10, 147
+Németh László, fehér márvány, Szent István tér, 8-10, 148
+Kodály Zoltán, fehér márvány, Szent István tér, 8-10, 149
+Koch Valéria, fehér márvány, Szent István tér, 8-10, 150
+Tanítóképző, siklósi rózsamárvány, Szent István tér, 8-10, 151
+Éneklő-zenélő Diákok, tölgyfa, Szent István tér, 8-10, 152
+I. Ferenc József, fehér márvány, Szent István tér, 12, 153
+Frigyes Főherceg, márvány, Szent István tér, 12, 154
+Littke Pezsgőgyár, fehér márvány, Szent István tér, 12, 155
+Petrovich Ede, siklósi rózsamárvány, Szent István tér, 14, 156
+Gosztonyi Gyula, siklósi rózsamárvány, Szent István tér, 14, 157
+Szőnyi Ottó, siklósi rózsamárvány, Szent István tér, 14, 158
+Kocsis László, matt kerámia, Szent István tér, 14, 159
+Gábor Jenő, siklósi mészkő, Szent István tér, 21, 160
+Klimo György, fehér márvány, Szent István tér, 23, 161
+Filákovity Branko, fehér márvány, Szepesy Ignác utca, 1, 162
+I. Világháború, szürke márvány, Szepesy Ignác utca, 1, 163
+Tanitóképezde, siklósi rózsamárvány, Szepesy Ignác utca, 1-3, 164
+Könyvtáralapítás, fehér márvány, Szepesy Ignác utca, 3, 165
+Könytárszabályzat, fehér márvány, Szepesy Ignác utca, 3, 166
+Klimo Epitáfum, fehér márvány, Szepesy Ignác utca, 3, 167
+Várkonyi Nándor, fehér márvány, Szepesy Ignác utca, 3, 168
+Ady Endre, fehér márvány, Színház tér, 1, 169
+Eck Imre, zöld gránit, Színház tér, 1, 170
+Alapítók, fehér márvány, Tímár utca, 5, 171
+Szántó László, fehér márvány, Tímár utca, 5, 172
+Martyn Ferenc és Martyn Klára, fehér márvány, Toldi Miklós utca, 4, 173
+Telefonközpont, fehér márvány, Váradi Antal utca, 6, 174
+Munkásmozgalmi, fehér márvány, Váradi Antal utca, 7/2, 175
+Szabó József, fehér márvány, Zrínyi Miklós utca, 13, 176
+Lásztity Szvetozár, fekete gránit, Zrínyi Miklós utca, 15, 177
+Babits Mihály, szürke márvány, Zrínyi Miklós utca, 20, 178
+Eszparantó Emlékfal, szürke gránit impala, Eszparantó park, -, 180
+Zamenhof, szürke gránit impala, Eszparantó park, -, 181
+Bácskai István, szürke gránit impala, Eszparantó park, -, 182
+SzentKátolnai Bálint Gábor, szürke gránit impala, Eszparantó park, -, 183
+Baghy Gyula, szürke gránit impala, Eszparantó park, -, 184
+Bleier Vilmos, szürke gránit impala, Eszparantó park, -, 185
+Giesswein Sándor, szürke gránit impala, Eszparantó park, -, 186
+Kalocsay Kálmán, szürke gránit impala, Eszparantó park, -, 187
+Kökény Lajos, szürke gránit impala, Eszparantó park, -, 188
+Lengyel Pál, szürke gránit impala, Eszparantó park, -, 189
+Szerdahelyi István, szürke gránit impala, Eszparantó park, -, 190
+Lajos Gyula; Pechan Alfonz; Pallós Istvánné∣, szürke gránit impala, Eszparantó park, -, 191
+`;
+                                
+                                            var lines = csvData.split('\n');
+                                            for (var i = 1; i < lines.length; i++) {
+                                                var values = lines[i].split(',');
+                                                if (values.length === 5) {
+                                                    var név = values[0].trim();
+                                                    var anyag = values[1].trim();
+                                                    var utca = values[2].trim();
+                                                    var haz = values[3].trim();
+                                
+                                                    var newRow = tableBody.insertRow();
+                                                    var cell1 = newRow.insertCell(0);
+                                                    var cell2 = newRow.insertCell(1);
+                                                    var cell3 = newRow.insertCell(2);
+                                                    var cell4 = newRow.insertCell(3);
+                                
+                                                    cell1.textContent = név;
+                                                    cell2.textContent = anyag;
+                                                    cell3.textContent = utca;
+                                                    cell4.textContent = haz;
+                                                }
+                                            }
+                                        }
+                                
+                                        function toggleAndLoadData() {
+                                            toggleVisibilityyy();
+                                            loadData();
+                                        }
+                                    </script>
+                                    
+                                    
+
+
+                                    <hr>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Bezárás
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
